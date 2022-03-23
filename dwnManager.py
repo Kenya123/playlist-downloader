@@ -2,36 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 from pytube import YouTube
 import os
-#format title into url
-#song_name = "GI-DLE - Oh my god" #debug purposes - will read from file
-#split_name = song_name.split()
-#url = "https://" + split_name[0]  #adds first part of song name to url
-
-#for word in split_name[1:]:
- #  url = url + "-" + word
-
-#add end of url
-#url_end = ".mp3juices.icu/"
-#url = url + url_end
-#print(url)
-
-#request the url
-#req = requests.get(url)
-#parse the html of the result
-#soup = BeautifulSoup(req.text, 'html.parser')
-
-#tag = soup.li  #parse the list in the html
-#yt_ref = tag.attrs #get the attrs of the link tag
-#ref_value = yt_ref["yt"] #get the yt attribute
-
-
-#create youtube url
-#first = "https://youtu.be/"
-#last = ref_value
-#yt_url = first + last
-#print(yt_url)
-
-
 
 def get_youtube_url(song_name):
     split_name = song_name.split()
@@ -72,8 +42,8 @@ def read_playlist(playlist_name):
         download_song(youtube_url)        
 
 
-read_playlist("spotify_playlist.txt")
-#download_song('https://youtu.be/RzjvN3mwBQI')
+read_playlist("spotify_playlist.txt" #enter your playlist name here)
+
 
 
 
